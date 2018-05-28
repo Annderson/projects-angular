@@ -13,12 +13,17 @@ import { Http, Response } from '@angular/http';
 export class GiphySearchManualComponent implements OnInit {
     constructor(private giphySearchService: GiphySearchService) { }
 
+    limit: string;
+    term: string;
+    gifs: any[] = [];
+
     ngOnInit() { }
 
     pesquisarGiphy() {
-        this.giphySearchService.pesquisarGiphy('2' , 'good')
+        this.giphySearchService.pesquisarGiphy(this.limit, this.term)
         .subscribe((response: Response) => {
-            console.log(response);
+            console.log(response.json());
+            this.gifs = response.json().data;
         });
     }
 }
