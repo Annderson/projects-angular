@@ -1,3 +1,4 @@
+import { MessangerModule } from './messanger/messanger.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,7 +11,8 @@ import { GiphySearchManualModule } from './giphy/giphy-search-manual/giphy-searc
   ],
   imports: [
     BrowserModule,
-    GiphySearchManualModule
+    GiphySearchManualModule,
+    MessangerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

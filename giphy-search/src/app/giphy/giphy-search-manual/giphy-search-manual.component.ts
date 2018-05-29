@@ -1,7 +1,9 @@
+import { MessangerService } from './../../messanger/messanger.service';
 
 import { Component, OnInit } from '@angular/core';
 import { GiphySearchService } from '../giphy-search.service';
 import { Http, Response } from '@angular/http';
+import { MessangerComponent } from '../../messanger/messanger.component';
 
 
 @Component({
@@ -11,14 +13,16 @@ import { Http, Response } from '@angular/http';
 })
 
 export class GiphySearchManualComponent implements OnInit {
-    constructor(private giphySearchService: GiphySearchService) { }
+    constructor(private mens: GiphySearchService) { }
 
     ngOnInit() { }
 
     pesquisarGiphy() {
-        this.giphySearchService.pesquisarGiphy('2' , 'good')
+      this.mens.pesquisarGiphy();
+       /* this.giphySearchService.pesquisarGiphy('2' , 'good')
         .subscribe((response: Response) => {
             console.log(response);
         });
+        */
     }
 }

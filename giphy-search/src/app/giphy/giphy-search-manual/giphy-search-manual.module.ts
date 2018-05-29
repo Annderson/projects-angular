@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { GiphySearchManualComponent } from './giphy-search-manual.component';
 import { GiphySearchService } from '../giphy-search.service';
+import { MessangerService } from '../../messanger/messanger.service';
 
 @NgModule({
     imports: [],
@@ -9,4 +10,6 @@ import { GiphySearchService } from '../giphy-search.service';
     declarations: [GiphySearchManualComponent],
     providers: [GiphySearchService],
 })
-export class GiphySearchManualModule { }
+export class GiphySearchManualModule {
+
+ }
