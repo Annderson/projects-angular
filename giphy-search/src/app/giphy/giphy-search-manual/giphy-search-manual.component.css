@@ -1,0 +1,8 @@
+.ttable>tr>td>a>img {
+    width: 300px;
+    height: 300px;
+}
+
+.ttable {
+    margin-top: 500px
+}
