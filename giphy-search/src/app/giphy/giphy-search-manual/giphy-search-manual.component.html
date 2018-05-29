@@ -6,9 +6,9 @@
 
 <table>
     <tbody>
-        <tr *ngFor="let gif of gifs">
+        <tr>
             <td>
-                <a href="{{gif.url}}" target="_blank">
+                <a *ngFor="let gif of gifs" href="{{gif.url}}" target="_blank">
                     <img src="http://i.giphy.com/{{ gif.id }}.gif" title="image {{ gif.title }}" />
                 </a>
             </td>
