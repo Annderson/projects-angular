@@ -9,7 +9,7 @@ export class GiphySearchService {
     constructor(private http: Http) { }
 
     pesquisarGiphy(limit: string, term: string): Observable<Response> {
-        const url = 'http://api.giphy.com/v1/gifs/search?q=' + term + '&api_key=dc6zaTOxFJmzC&limit=' + limit;
+        const url = 'http://api.giphy.com/v1/gifs/search?q=happy&api_key=dc6zaTOxFJmzC&limit=15';
         return this.http.get(url);
     }
 }
