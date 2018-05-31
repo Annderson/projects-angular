@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <tr>
+            <th>Gifs Animados</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let gif of gifs">
+            <td>
+                <a *ngFor="let gif of gifs" href="{{gif.url}}" target="_blank">
+                    <img src="http://i.giphy.com/{{ gif.id }}.gif" title="image {{ gif.title }}" />
+                </a>
+            </td>
+            <td>
+                <a href="{{gif.url}}" target="_blank">
+                    <img src="http://i.giphy.com/{{ gif.id }}.gif" title="image {{ gif.title }}" />
+                </a>
+            </td>
+            <td>
+                <a href="{{gif.url}}" target="_blank">
+                    <img src="http://i.giphy.com/{{ gif.id }}.gif" title="image {{ gif.title }}" />
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

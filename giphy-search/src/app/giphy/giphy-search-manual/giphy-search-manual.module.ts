@@ -14,4 +14,6 @@ import { FormsModule } from '@angular/forms';
     declarations: [GiphySearchManualComponent],
     providers: [GiphySearchService],
 })
-export class GiphySearchManualModule { }
+export class GiphySearchManualModule {
+
+ }

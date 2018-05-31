@@ -12,5 +12,4 @@ export class GiphySearchService {
         const url = 'http://api.giphy.com/v1/gifs/search?q=' + term + '&api_key=dc6zaTOxFJmzC&limit=' + limit;
         return this.http.get(url);
     }
-
 }
