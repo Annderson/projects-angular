@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
     imports: [
       CommonModule,
-      FormsModule
+      FormsModule,
     ],
     exports: [GiphySearchManualComponent],
     declarations: [GiphySearchManualComponent],

@@ -14,11 +14,4 @@
 </div>
 <br>
 
-
-<div class="container" *ngIf="comparation != false">
-    <div class="img-blocks">
-        <a *ngFor="let gif of gifs" href="{{gif.url}}" target="_blank">
-            <img class="img-giphys" src="http://i.giphy.com/{{ gif.id }}.gif" title="image {{ gif.title }}" />
-        </a>
-    </div>
-</div>
+<giphy-list></giphy-list>

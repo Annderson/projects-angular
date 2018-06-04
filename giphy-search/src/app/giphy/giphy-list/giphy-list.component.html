@@ -1,0 +1,10 @@
+<p>
+    giphy-list works!
+</p>
+<div class="container">
+    <div class="img-blocks">
+        <a *ngFor="let gif of gifsList" href="{{gif.url}}" target="_blank">
+            <img class="img-giphys" src="http://i.giphy.com/{{ gif.id }}.gif" title="image {{ gif.title }}" />
+        </a>
+    </div>
+</div>
