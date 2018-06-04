@@ -8,7 +8,17 @@
             Term: <input type="text" class="inputs-text" [(ngModel)]="term" />
         </div>
         <div class="col-md-4">
-            <input class="btn btn-lg btn-success btn-search" type="button" value="Pesquisar" (click)="pesquisarGiphy()" />
+            <input class="btn btn-success btn-search" type="button" value="Pesquisar" (click)="pesquisarGiphy()" />
         </div>
+    </div>
+</div>
+<br>
+
+
+<div class="container" *ngIf="comparation != false">
+    <div class="img-blocks">
+        <a *ngFor="let gif of gifs" href="{{gif.url}}" target="_blank">
+            <img class="img-giphys" src="http://i.giphy.com/{{ gif.id }}.gif" title="image {{ gif.title }}" />
+        </a>
     </div>
 </div>

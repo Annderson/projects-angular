@@ -15,6 +15,7 @@ import { templateJitUrl } from '@angular/compiler';
 export class GiphySearchManualComponent implements OnInit {
     constructor(private giphySearchService: GiphySearchService) { }
 
+    private comparation = false;
     private limit: string;
     private term: string;
     private gifs: any[] = [];
@@ -26,6 +27,7 @@ export class GiphySearchManualComponent implements OnInit {
         .subscribe((response: Response) => {
             console.log(response.json());
             this.gifs = response.json().data;
+            this.comparation = true;
         });
     }
 }
