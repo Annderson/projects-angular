@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { GiphySearchManualModule } from './giphy/giphy-search-manual/giphy-search-manual.module';
 import { HttpModule } from '@angular/http';
 import { GiphyListComponent } from './giphy/giphy-list/giphy-list.component';
+import { LoginComponent } from './login/login.component';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { GiphyListComponent } from './giphy/giphy-list/giphy-list.component';
     BrowserModule,
     HttpModule,
     GiphySearchManualModule,
-    GiphyListModule
+    GiphyListModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
