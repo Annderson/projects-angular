@@ -1,26 +1,35 @@
-import { GiphyListModule } from './giphy/giphy-list/giphy-list.module';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { KeycloakService, KeycloakAngularModule } from 'keycloak-angular';
+import { initializer } from './utils/app-init';
 import { AppComponent } from './app.component';
+
 import { GiphySearchManualModule } from './giphy/giphy-search-manual/giphy-search-manual.module';
 import { HttpModule } from '@angular/http';
-import { GiphyListComponent } from './giphy/giphy-list/giphy-list.component';
-import { LoginComponent } from './login/login.component';
 import { LoginModule } from './login/login.module';
+import { CommonModule } from '@angular/common';
+import { GiphyListModule } from './giphy/giphy-list/giphy-list.module';
+import { BrowserModule } from '@angular/platform-browser';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [ AppComponent ],
   imports: [
     BrowserModule,
+    CommonModule,
     HttpModule,
     GiphySearchManualModule,
+    KeycloakAngularModule,
     GiphyListModule,
-    LoginModule
+    LoginModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializer,
+      multi: true,
+      deps: [KeycloakService]
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
