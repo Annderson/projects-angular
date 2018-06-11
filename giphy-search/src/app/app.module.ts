@@ -7,6 +7,7 @@ import { LoginModule } from './login/login.module';
 import { CommonModule } from '@angular/common';
 import { GiphyListModule } from './giphy/giphy-list/giphy-list.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -15,9 +16,10 @@ import { BrowserModule } from '@angular/platform-browser';
     BrowserModule,
     CommonModule,
     HttpModule,
-    GiphySearchManualModule,
-    GiphyListModule,
     LoginModule,
+    GiphyListModule,
+    GiphySearchManualModule,
+    AppRoutingModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]

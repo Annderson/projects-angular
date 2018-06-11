@@ -3,7 +3,6 @@ import { Giphy } from './giphy.type';
 import { Component, OnInit } from '@angular/core';
 import { GiphySearchService } from '../giphy-search.service';
 import { Http, Response } from '@angular/http';
-import { templateJitUrl } from '@angular/compiler';
 
 
 @Component({
@@ -16,7 +15,6 @@ import { templateJitUrl } from '@angular/compiler';
 export class GiphySearchManualComponent implements OnInit {
     constructor(private giphySearchService: GiphySearchService) { }
 
-    private comparation = false;
     private limit: string;
     private term: string;
     private gifs: Giphy[] = [];
@@ -28,7 +26,6 @@ export class GiphySearchManualComponent implements OnInit {
         .subscribe((response: Response) => {
             console.log(response.json());
             this.gifs = response.json().data;
-            this.comparation = true;
         });
     }
 }
