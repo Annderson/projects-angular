@@ -10,6 +10,7 @@ export class GiphySearchService {
 
     pesquisarGiphy(limit: string, term: string): Observable<Response> {
         const url = 'http://api.giphy.com/v1/gifs/search?q='+term+'&api_key=dc6zaTOxFJmzC&limit='+limit;
+        console.log(url);
         return this.http.get(url);
     }
 }

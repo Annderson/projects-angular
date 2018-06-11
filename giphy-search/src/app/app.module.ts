@@ -1,25 +1,30 @@
-import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
-import { GiphySearchManualModule } from './giphy/giphy-search-manual/giphy-search-manual.module';
 import { HttpModule } from '@angular/http';
-import { LoginModule } from './login/login.module';
 import { CommonModule } from '@angular/common';
-import { GiphyListModule } from './giphy/giphy-list/giphy-list.module';
-import { BrowserModule } from '@angular/platform-browser';
+import { OAuthModule } from 'angular-oauth2-oidc'
+import { LoginModule } from './login/login.module';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { NavManuModule } from './nav-manu/nav-manu.module';
+import { GiphyListModule } from './giphy/giphy-list/giphy-list.module';
+import { GiphySearchManualModule } from './giphy/giphy-search-manual/giphy-search-manual.module';
+import { FachadaComponent } from './fachada/fachada.component';
 
 
 @NgModule({
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, FachadaComponent ],
   imports: [
     BrowserModule,
     CommonModule,
     HttpModule,
     LoginModule,
+    NavManuModule,
     GiphyListModule,
+    AppRoutingModule,
+    OAuthModule.forRoot(),
     GiphySearchManualModule,
-    AppRoutingModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]

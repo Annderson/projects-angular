@@ -1,6 +1,7 @@
 export interface Giphy{
   id: string;
   url: string;
+  title: string;
   images: Images;
 }
 
