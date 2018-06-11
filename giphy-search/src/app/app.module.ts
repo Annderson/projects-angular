@@ -1,6 +1,4 @@
 import { NgModule, APP_INITIALIZER } from '@angular/core';
-import { KeycloakService, KeycloakAngularModule } from 'keycloak-angular';
-import { initializer } from './utils/app-init';
 import { AppComponent } from './app.component';
 
 import { GiphySearchManualModule } from './giphy/giphy-search-manual/giphy-search-manual.module';
@@ -18,18 +16,10 @@ import { BrowserModule } from '@angular/platform-browser';
     CommonModule,
     HttpModule,
     GiphySearchManualModule,
-    KeycloakAngularModule,
     GiphyListModule,
     LoginModule,
   ],
-  providers: [
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initializer,
-      multi: true,
-      deps: [KeycloakService]
-    }
-  ],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

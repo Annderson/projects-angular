@@ -5,12 +5,14 @@ import { GiphySearchService } from '../giphy-search.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { GiphyListModule } from '../giphy-list/giphy-list.module';
+import { GipgySearchManualRoutingModule } from './giphy-search-manual-routing.module';
 
 @NgModule({
     imports: [
       CommonModule,
       FormsModule,
-      GiphyListModule
+      GiphyListModule,
+      GipgySearchManualRoutingModule
     ],
     exports: [GiphySearchManualComponent],
     declarations: [GiphySearchManualComponent],
