@@ -11,7 +11,7 @@ export const authConfig: AuthConfig = {
 
   // The SPA's id.
   // The SPA is registerd with this id at the auth-server.
-  clientId: 'test-app',
+  clientId: 'product-app',
 
   // Set the scope for the permisssions the client should request
   // The first three are defined by OIDC.

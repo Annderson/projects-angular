@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NavManuComponent } from './nav-manu.component';
 
 const routes: Routes = [
-  { path: '', component: NavManuComponent },
+  { path: 'nav', component: NavManuComponent },
 ];
 
 @NgModule({
