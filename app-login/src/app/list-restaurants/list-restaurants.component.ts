@@ -1,5 +1,6 @@
+import { Response } from '@angular/http';
+import { ListService } from './../service/list.service';
 import { Component, OnInit } from '@angular/core';
-import { ListService } from '../service/list.service';
 
 @Component({
   selector: 'app-list-restaurants',
@@ -8,11 +9,20 @@ import { ListService } from '../service/list.service';
 })
 export class ListRestaurantsComponent implements OnInit {
 
-  private list: ListService;
+  gifs: any[] = [];
+  limit: string;
+  termo: string;
 
-  constructor() { }
+  constructor(private list: ListService) { }
 
   ngOnInit() {
+  }
+
+  buscar() {
+     this.list.searchGiphy(this.limit, this.termo).subscribe((res: Response) => {
+       this.gifs = res.json().data;
+       console.log(res);
+     });
   }
 
 }

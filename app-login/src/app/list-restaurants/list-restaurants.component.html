@@ -1,4 +1,12 @@
+<br><br>
 <div>
-    quantidade: <input type="number" /> tema: <input type="text" />
-    <button>Buscar</button>
+    &nbsp; quantidade: <input type="number" [(ngModel)]="limit" /> tema: <input type="text" [(ngModel)]="termo" /> &nbsp;
+    <button (click)="buscar();">Buscar</button>
+</div>
+<br><br>
+
+<div class="row">
+    <a *ngFor="let gif of gifs" [href]="gif.url">
+        <img src="http://i.giphy.com/{{gif.id}}.gif" />
+    </a>
 </div>
