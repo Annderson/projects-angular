@@ -1,34 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { ShareModule } from './share/share.module';
 import { NgModule } from '@angular/core';
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { ScrollingModule } from '@angular/cdk/scrolling';
 import { VirtualScrollComponent } from './virtual-scroll/virtual-scroll.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    VirtualScrollComponent
+    VirtualScrollComponent,
+    LoginComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    DragDropModule,
-    ScrollingModule,
-    BrowserAnimationsModule
+    ShareModule
   ],
   exports: [
-    BrowserModule,
-    AppRoutingModule,
-    DragDropModule,
-    ScrollingModule,
-    BrowserAnimationsModule
+    ShareModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
