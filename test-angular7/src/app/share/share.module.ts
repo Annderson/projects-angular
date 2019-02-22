@@ -1,3 +1,4 @@
+import { ActionBarComponent } from './../component/action-bar/action-bar.component';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollingModule } from '@angular/cdk/scrolling';
@@ -7,7 +8,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ActionBarComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -16,6 +19,7 @@ import { CommonModule } from '@angular/common';
     ScrollingModule,
   ],
   exports: [
+    ActionBarComponent,
     CommonModule,
     FormsModule,
     RouterModule,
