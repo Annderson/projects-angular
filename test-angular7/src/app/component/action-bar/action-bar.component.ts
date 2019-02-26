@@ -9,7 +9,10 @@ export class ActionBarComponent implements OnInit {
 
   public colorBar = '';
 
-  constructor() { }
+  constructor() {
+    this.colorBar = window.location.href.indexOf('customer') > 0 ?
+                    'color-action' : window.location.href.indexOf('about') > 0 ? 'color-action' : '';
+  }
 
   ngOnInit() {
   }
