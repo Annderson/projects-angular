@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light {{colorBar}}">
   <a class="navbar-brand" [routerLinkActive]="['active']"  [routerLink]="['']">IRIDESCENT</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse"
           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -6,18 +6,25 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse"  style="float: right;" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse "  style="float: right;" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" [routerLinkActive]="['active']"  [routerLink]="['']">
+        <a class="nav-link" [routerLinkActive]="['active']"
+          [routerLink]="['']" (click)="coolorNav('');">
           HOME
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLinkActive]="['active']"  [routerLink]="['about']">ABOUT</a>
+        <a class="nav-link" [routerLinkActive]="['active']"
+          [routerLink]="['about']" (click)="coolorNav('color-action');">
+          ABOUT
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLinkActive]="['active']"  [routerLink]="['customer']">CUSTOMER</a>
+        <a class="nav-link" [routerLinkActive]="['active']"
+          [routerLink]="['customer']" (click)="coolorNav('color-action');">
+          CUSTOMER
+        </a>
       </li>
     </ul>
   </div>

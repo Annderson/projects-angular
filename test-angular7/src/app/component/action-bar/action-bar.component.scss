@@ -6,8 +6,10 @@
   z-index: 9;
   text-shadow: none;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: rgba(0, 0, 0, 0.4);
-  box-shadow: 0 4px 5px -3px black;
+  .color-action{
+    background-color: black;
+    box-shadow: 0px 4px 3px -2px;
+  }
   .navbar-nav {
     right: 0;
     position: absolute;

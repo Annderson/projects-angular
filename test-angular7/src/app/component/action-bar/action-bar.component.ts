@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActionBarComponent implements OnInit {
 
+  public colorBar = '';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  coolorNav(cor: string){
+    this.colorBar = cor;
   }
 
 }
