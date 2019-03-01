@@ -1,3 +1,4 @@
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { CustomerComponent } from './pages/customer/customer.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -14,10 +15,12 @@ import { ShareModule } from '../share/share.module';
     CustomerComponent,
   ],
   imports: [
-    HomeRoutingModule,
     ShareModule,
+    LeafletModule.forRoot(),
+    HomeRoutingModule,
   ],
   exports: [
+    LeafletModule
   ],
   providers: []
 })

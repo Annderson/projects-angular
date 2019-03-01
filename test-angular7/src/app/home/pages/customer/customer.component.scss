@@ -18,5 +18,12 @@
     .portfolio-item .portfolio-intro {
       margin-bottom: 28px;
     }
+    .map-company {
+      min-height: 500px;
+      z-index: 0;
+      margin-top: 40px;
+      margin-bottom: 50px;
+      box-shadow: 0px 1px 27px -2px black;
+    }
   }
 }

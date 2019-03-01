@@ -58,7 +58,14 @@
         </form>
       </div>
       <div class="col-md-6 col-sm-12">
-
+        <!-- <div  class="map-company"
+              leaflet
+              [leafletOptions]="options">
+        </div> -->
+        <div class="map map-company"
+            leaflet
+            [leafletOptions]="options"
+            [leafletLayersControl]="layersControl"></div>
       </div>
     </div>
   </div>
