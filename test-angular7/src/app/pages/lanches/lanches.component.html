@@ -1,0 +1,62 @@
+<div class="top-page">
+  <div class="container">
+    <div class="text-center">
+        <h2>Escolha seu lanche</h2>
+    </div><br>
+    <div class="row ">
+      <div class="col-md-6 col-sm-12 pt-4">
+        <b>PROMOÇÔES</b>
+        <li>
+          <b>Light</b>
+          <p>Se tem alface e não tem bacon, ganha 10% de desconto.
+        </li>
+        <li>
+          <b>Muita carne</b>
+          <p>A cada 3 porções de carne o cliente só paga 2. Se o lanche tiver 6 porções, ocliente pagará 4. Assim por diante...
+        </li>
+        <li>
+          <b>Muito queijo</b>
+          <p>A cada 3 porções de queijo o cliente só paga 2. Se o lanche tiver 6 porções, ocliente pagará 4. Assim por diante...
+        </li>
+      </div>
+      <div class="col-md-6 col-sm-12 pt-4">
+        <div *ngIf="nomeEscolha==null" >
+          <div  class="row cards">
+            <button class="btn btn-lg btn-block btn-dark" (click)="escolha()" >
+                Monte seu lanche
+            </button>
+          </div>
+          <div  class="row cards" *ngFor="let lan of lanches">
+            <button class="btn btn-lg btn-block btn-success" (click)="escolha(lan)" >
+              {{ lan.nome }}
+            </button>
+          </div>
+        </div>
+
+        <div *ngIf="nomeEscolha != null" >
+          <h4>{{ nomeEscolha }}</h4><br>
+          <h5>Adicionar ingredientes</h5>
+          <div class="card card-body">
+            <div *ngFor="let igr of lanche">
+              <label style="margin-bottom: 0; margin-top: 5px;">{{igr.nome}}</label> <br>
+              <input type="number" (keyup)="addIngrediente(igr.id, $event.target.value)"
+                      (click)="addIngrediente(igr.id,$event.target.value)"
+                      [value]="igr.qtd">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <h3>Total a pagar: R${{total| number : '1.2'}}</h3>
+    </div>
+    <div class="row mb-5">
+      <button type="button" [routerLink]="['']" class="btn btn-dark">
+        Voltar
+      </button>&nbsp;&nbsp;
+      <button type="button" (click)="enviar()" class="btn btn-dark">
+        Enviar
+      </button>
+    </div>
+  </div>
+</div>

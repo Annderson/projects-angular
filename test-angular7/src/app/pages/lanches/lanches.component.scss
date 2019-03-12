@@ -1,0 +1,25 @@
+:host{
+  .top-page {
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    color: black;
+    overflow: auto;
+    .cards {
+      margin-bottom: 40px;
+      .label-lanche {
+        margin: 20px 10px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+     .input-check {
+      width: 18px;
+      height: 18px;
+     }
+     .lanches {
+      width: 60px;
+      height: 60px;
+     }
+    }
+  }
+}

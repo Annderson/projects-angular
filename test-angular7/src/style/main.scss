@@ -1,5 +1,7 @@
+@import '~ngx-toastr/toastr.css';
+
+
 body {
-  background: #3b3b3b;
   color: #848484;
   font-weight: 200;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -8,4 +10,21 @@ body {
     background: chartreuse;
     color: black;
   }
+  .toast-container .toast {
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 6px;
+    box-shadow: 0 0 12px #000000;
+    opacity: 1;
+    cursor: pointer;
+    padding: 15px 15px 15px 50px;
+    width: 300px;
+    border-radius: 3px 3px 3px 3px;
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    box-shadow: 0 0 12px #999999;
+    color: #FFFFFF;
+  }
+ 
 }

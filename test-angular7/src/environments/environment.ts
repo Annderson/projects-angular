@@ -5,8 +5,10 @@
 export const environment = {
   production: false,
   CLIENTS_PATHS: {
-    ABOUT: 'about',
-    CUSTOMER: 'customer'
+    LANCHES: 'lanches',
+    MONTE: 'monte',
+    PROMOCOES: 'promocoes',
+    HOME: 'home'
   }
 };
 
