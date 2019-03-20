@@ -39,19 +39,19 @@ export class LanchesComponent implements OnInit {
     );
   }
 
-  escolha(lan){
-    if(lan){
+  escolha(lan) {
+    if (lan) {
       this.nomeEscolha = lan.nome;
       this.ingredientes.filter(igr => {
-        lan.ingredientes.includes(igr.id)?
-          this.montarLanche(igr.id, igr.nome, igr.preco, 1):
-          this.montarLanche(igr.id, igr.nome, igr.preco, 0)
-      })
-    }else{
+        lan.ingredientes.includes(igr.id) ?
+          this.montarLanche(igr.id, igr.nome, igr.preco, 1) :
+          this.montarLanche(igr.id, igr.nome, igr.preco, 0);
+      });
+    } else {
       this.nomeEscolha = 'Monte seu lanche';
       this.ingredientes.filter(igr => {
-        this.montarLanche(igr.id, igr.nome, igr.preco, 0)
-      })
+        this.montarLanche(igr.id, igr.nome, igr.preco, 0);
+      });
     }
     this.calcular();
   }
@@ -69,15 +69,15 @@ export class LanchesComponent implements OnInit {
       this.total += el.preco * this.calcularPromocao(el);
     });
 
-    let alf = this.lanche.find( el => el.id === 'alface');
-    let bac = this.lanche.find( el => el.id === 'bacon');
+    const alf = this.lanche.find( el => el.id === 'alface');
+    const bac = this.lanche.find( el => el.id === 'bacon');
 
     if (alf.qtd >= 1 && bac.qtd <= 0) {
       this.total = this.total - (this.total * 0.1);
     }
   }
 
-  calcularPromocao(el): number{
+  calcularPromocao(el): number {
     let v = el.qtd;
     if (el.id === 'queijo' && el.qtd % 3 === 0) {
       v = 2 * (el.qtd / 3 );
@@ -88,8 +88,8 @@ export class LanchesComponent implements OnInit {
     return v;
   }
 
-  enviar(){
-    if (this.total <= 0){
+  enviar() {
+    if (this.total <= 0) {
       this.toastr.error('Não foi escolhido nenhum lanche!', 'Erro ao confirmar!');
     } else {
       this.toastr.success('Seu pedido foi enviado com sucesso!', 'Pedido confirmado!');

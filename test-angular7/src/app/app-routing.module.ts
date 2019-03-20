@@ -1,3 +1,4 @@
+import { CadLancheComponent } from './pages/cad-lanche/cad-lanche.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HomeModule } from './pages/home/home.module';
 import { environment } from './../environments/environment';
@@ -10,6 +11,10 @@ const routes: Routes = [
   {
     path: '',
     component: OptionComponent
+  },
+  {
+    path: environment.CLIENTS_PATHS.CADLANCHE,
+    component: CadLancheComponent,
   },
   {
     path: environment.CLIENTS_PATHS.LANCHES,

@@ -37,7 +37,7 @@ export class LanchesService {
     {
       id: 'xbacon',
       nome: 'X-Bacon',
-      ingredientes: ['bacon','hamburger','queijo'],
+      ingredientes: ['bacon', 'hamburger', 'queijo'],
     },
     {
       id: 'xburger',

@@ -1,0 +1,12 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+    <mat-drawer-content>Main content</mat-drawer-content>
+    <div class="example-button-row">
+        <app-buttons [backColor]="'btn-gray'" [name]="'old project'"></app-buttons>
+        <app-buttons [backColor]="'btn-green'" [name]="'new project'"></app-buttons>
+
+        <a mat-raised-button routerLink=".">Link</a>
+      </div>
+</mat-drawer-container>
+
+
