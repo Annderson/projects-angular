@@ -30,8 +30,7 @@ export class CadUserComponent implements OnInit {
     this.userService.validarCep('');
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   logar() {
     if (_.isNull(this.mail) || _.isUndefined(this.mail) || _.isEmpty(this.mail) ||
