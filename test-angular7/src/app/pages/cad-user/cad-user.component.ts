@@ -1,16 +1,16 @@
-import { UserService } from './../../service/user/user.service';
-import { LanchesService } from './../../service/lanche/lanches.service';
+import { UserService } from '../../service/user/user.service';
+import { LanchesService } from '../../service/lanche/lanches.service';
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import * as _ from 'lodash';
 
 
 @Component({
-  selector: 'app-cad-lanche',
-  templateUrl: './cad-lanche.component.html',
-  styleUrls: ['./cad-lanche.component.scss']
+  selector: 'app-cad-user',
+  templateUrl: './cad-user.component.html',
+  styleUrls: ['./cad-user.component.scss']
 })
-export class CadLancheComponent implements OnInit {
+export class CadUserComponent implements OnInit {
 
   public nome: string;
   public conculCEP: string;

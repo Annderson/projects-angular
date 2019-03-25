@@ -1,6 +1,6 @@
 import { OptionComponent } from './pages/option/option.component';
 import { LanchesComponent } from './pages/lanches/lanches.component';
-import { CadLancheComponent } from './pages/cad-lanche/cad-lanche.component';
+import { CadUserComponent } from './pages/cad-user/cad-user.component';
 import { HomeModule } from './pages/home/home.module';
 import { ShareModule } from './share/share.module';
 import { NgModule } from '@angular/core';
@@ -18,7 +18,7 @@ import { UserService } from './service/user/user.service';
     AppComponent,
     LanchesComponent,
     OptionComponent,
-    CadLancheComponent,
+    CadUserComponent,
   ],
   imports: [
     ShareModule,

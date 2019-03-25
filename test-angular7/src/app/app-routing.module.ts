@@ -1,4 +1,4 @@
-import { CadLancheComponent } from './pages/cad-lanche/cad-lanche.component';
+import { CadUserComponent } from './pages/cad-user/cad-user.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HomeModule } from './pages/home/home.module';
 import { environment } from './../environments/environment';
@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: environment.CLIENTS_PATHS.CADLANCHE,
-    component: CadLancheComponent,
+    component: CadUserComponent,
   },
   {
     path: environment.CLIENTS_PATHS.LANCHES,
