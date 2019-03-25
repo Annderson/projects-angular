@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule, MatMenuModule } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MatButtonModule, MatMenuModule } from '@angular/material';
     FormsModule,
     RouterModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
   exports: [
     CommonModule,
@@ -27,6 +29,7 @@ import { MatButtonModule, MatMenuModule } from '@angular/material';
     MatMenuModule,
     MatButtonModule,
     SideBarComponent,
+    HttpClientModule,
     Functions6mComponent
   ],
   providers: []

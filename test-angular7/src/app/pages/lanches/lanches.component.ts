@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LanchesService } from '../../service/lanches.service';
+import { LanchesService } from './../../service/lanche/lanches.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 

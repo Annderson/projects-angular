@@ -1,3 +1,86 @@
-<p>
-  cad-lanche works!
-</p>
+<div class="cadlanche">
+  <div class="container" style="margin: 0;">
+    <div class="col-sm-12 cols">
+      <form class="form-user">
+        <div class="form-group">
+          <label for="nome"> Seu nome completo </label><br>
+          <input type="text" name="nome" id="nome" class="form-control"
+                (change)="validarNome()" [(ngModel)]="nome" />
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <label for="cpf"> CPF </label><br>
+              <input type="text" name="cpf" id="cpf" class="form-control"
+                    mask="000.000.000-00"/>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <label for="dataNascimento"> Data de nascimento </label><br>
+              <input type="text" name="dataNascimento" id="dataNascimento" class="form-control"
+                      mask="00/00/0000"/>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <label for="cep"> CEP </label><br>
+              <input type="text" name="cep" id="cep" class="form-control"
+                      (change)="consultarCep()" [(ngModel)]="conculCEP"/>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <label for="numero"> Número </label><br>
+              <input type="number" name="numero" id="numero" class="form-control"/>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="endereco"> Endereço </label><br>
+          <input type="email" name="endereco" id="endereco" class="form-control" disabled
+                  [(ngModel)]="endereco"/>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <label for="cidade"> Cidade </label><br>
+              <input type="text" name="cidade" id="cidade" class="form-control" disabled
+                    [(ngModel)]="cidade"/>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <label for="esatdo"> Estado </label><br>
+              <input type="text" name="esatdo" id="esatdo" class="form-control" disabled
+                      [(ngModel)]="estado"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email"> E-mail </label><br>
+          <input type="email" name="email" id="email" class="form-control"
+                  (change)="validarEmail()" [(ngModel)]="email" />
+        </div>
+        <div class="form-group">
+          <label for="senha"> Senha </label><br>
+          <input type="password" name="senha" id="senha" class="form-control"/>
+        </div>
+        <br>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6 col-sm-12">
+              <button type="button" class="btn btn-block btn-lg btn-danger">
+                Voltar
+              </button>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <button type="button" class="btn btn-block btn-lg btn-success"
+                      (click)="logar();">
+                Cadastar
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
