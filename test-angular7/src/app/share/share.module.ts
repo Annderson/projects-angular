@@ -30,8 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule,
     MatMenuModule,
     MatButtonModule,
-    SideBarComponent,
     HttpClientModule,
+    SideBarComponent,
     Functions6mComponent
   ],
   providers: []

@@ -1,23 +1,23 @@
 <div class="cadlanche">
   <div class="container" style="margin: 0;">
     <div class="col-sm-12 cols">
-      <form class="form-user">
+      <form class="form-user" [formGroup]="formUser">
         <div class="form-group">
           <label for="nome"> Seu nome completo </label><br>
-          <input type="text" name="nome" id="nome" class="form-control"
-                (change)="validarNome()" [(ngModel)]="nome" />
+          <input type="text" name="nome" id="nome" class="form-control" (change)="validarNome()"
+                 formControlName="nome" [(ngModel)]="formUser.get('nome').value"/>
         </div>
         <div class="form-group">
           <div class="row">
             <div class="col-md-6 col-sm-12">
               <label for="cpf"> CPF </label><br>
-              <input type="text" name="cpf" id="cpf" class="form-control"
-                    mask="000.000.000-00"/>
+              <input type="text" name="cpf" id="cpf" class="form-control" mask="000.000.000-00"
+                      formControlName="cpf" [(ngModel)]="formUser.get('cpf').value"/>
             </div>
             <div class="col-md-6 col-sm-12">
               <label for="dataNascimento"> Data de nascimento </label><br>
-              <input type="text" name="dataNascimento" id="dataNascimento" class="form-control"
-                      mask="00/00/0000"/>
+              <input type="text" name="dataNascimento" id="dataNascimento" class="form-control" mask="00/00/0000"
+                    formControlName="dataNasc" [(ngModel)]="formUser.get('dataNasc').value"/>
             </div>
           </div>
         </div>
@@ -25,55 +25,57 @@
           <div class="row">
             <div class="col-md-6 col-sm-12">
               <label for="cep"> CEP </label><br>
-              <input type="text" name="cep" id="cep" class="form-control"
-                      (change)="consultarCep()" [(ngModel)]="conculCEP"/>
+              <input type="text" name="cep" id="cep" class="form-control" (change)="consultarCep()"
+              formControlName="cep" [(ngModel)]="formUser.get('cep').value"/>
             </div>
             <div class="col-md-6 col-sm-12">
               <label for="numero"> Número </label><br>
-              <input type="number" name="numero" id="numero" class="form-control"/>
+              <input type="number" name="numero" id="numero" class="form-control"
+                    formControlName="numero" [(ngModel)]="formUser.get('numero').value"/>
             </div>
           </div>
         </div>
         <div class="form-group">
           <label for="endereco"> Endereço </label><br>
-          <input type="email" name="endereco" id="endereco" class="form-control" disabled
-                  [(ngModel)]="endereco"/>
+          <input type="text" name="endereco" id="endereco" class="form-control"
+                 formControlName="endereco" [(ngModel)]="formUser.get('endereco').value"/>
         </div>
         <div class="form-group">
           <div class="row">
             <div class="col-md-6 col-sm-12">
               <label for="cidade"> Cidade </label><br>
               <input type="text" name="cidade" id="cidade" class="form-control" disabled
-                    [(ngModel)]="cidade"/>
+                     formControlName="cidade" [(ngModel)]="formUser.get('cidade').value"/>
             </div>
             <div class="col-md-6 col-sm-12">
               <label for="esatdo"> Estado </label><br>
-              <input type="text" name="esatdo" id="esatdo" class="form-control" disabled
-                      [(ngModel)]="estado"/>
+              <input type="text" name="estado" id="estado" class="form-control" disabled
+                    formControlName="estado" [(ngModel)]="formUser.get('estado').value"/>
             </div>
           </div>
         </div>
 
         <div class="form-group">
           <label for="email"> E-mail </label><br>
-          <input type="email" name="email" id="email" class="form-control"
-                  (change)="validarEmail()" [(ngModel)]="email" />
+          <input type="email" name="email" id="email" class="form-control" (change)="validarEmail()"
+                formControlName="email" [(ngModel)]="formUser.get('email').value" />
         </div>
         <div class="form-group">
           <label for="senha"> Senha </label><br>
-          <input type="password" name="senha" id="senha" class="form-control"/>
+          <input type="password" name="senha" id="senha" class="form-control"
+                 formControlName="senha" [(ngModel)]="formUser.get('senha').value"/>
         </div>
         <br>
         <div class="form-group">
           <div class="row">
             <div class="col-md-6 col-sm-12">
-              <button type="button" class="btn btn-block btn-lg btn-danger"
+              <button type="button" class="btn btn-block btn-lg btn-danger mt-2"
                       [routerLink]="['']">
                 Voltar
               </button>
             </div>
             <div class="col-md-6 col-sm-12">
-              <button type="button" class="btn btn-block btn-lg btn-success"
+              <button type="button" class="btn btn-block btn-lg btn-success mt-2"
                       (click)="logar();">
                 Cadastar
               </button>

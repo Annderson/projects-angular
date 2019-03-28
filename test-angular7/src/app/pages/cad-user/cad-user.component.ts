@@ -1,8 +1,10 @@
+import { FormGroup } from '@angular/forms';
 import { UserService } from '../../service/user/user.service';
 import { LanchesService } from '../../service/lanche/lanches.service';
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import * as _ from 'lodash';
+import { UserFormService } from 'src/app/service/user-form/user-form.service';
 
 
 @Component({
@@ -12,6 +14,7 @@ import * as _ from 'lodash';
 })
 export class CadUserComponent implements OnInit {
 
+  public formUser: FormGroup;
   public nome: string;
   public conculCEP: string;
   public endereco: string;
@@ -23,10 +26,12 @@ export class CadUserComponent implements OnInit {
   public user: any;
 
   constructor(
+    private userForm: UserFormService,
     private lanchesService: LanchesService,
     private userService: UserService,
     private toastr: ToastrService,
   ) {
+    this.formUser = <FormGroup>this.userForm.init();
     this.userService.validarCep('');
   }
 

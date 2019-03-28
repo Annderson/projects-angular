@@ -1,3 +1,4 @@
+import { UserFormService } from 'src/app/service/user-form/user-form.service';
 import { OptionComponent } from './pages/option/option.component';
 import { LanchesComponent } from './pages/lanches/lanches.component';
 import { CadUserComponent } from './pages/cad-user/cad-user.component';
@@ -33,7 +34,8 @@ import { UserService } from './service/user/user.service';
   ],
   providers: [
     LanchesService,
-    UserService
+    UserService,
+    UserFormService
   ],
   bootstrap: [AppComponent]
 })
