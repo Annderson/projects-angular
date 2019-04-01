@@ -1,6 +1,8 @@
+import { User } from './../../models/user.class';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +32,17 @@ export class UserService {
 
   getEndereco(cep: string): Observable<any> {
     return this.http.get(`http://apps.widenet.com.br/busca-cep/api/cep.json?code=${cep}`);
+  }
+
+  public logar(email: string, senha: string): Observable<any> {
+    const param = {
+      email: email,
+      senha: senha
+    };
+    return this.http.post(`${environment.API.USUARIOTOKEN}`,  param);
+  }
+
+  registerUser(user: User): Observable<any> {
+    return this.http.post(environment.API.REGISTER_USER, user);
   }
 }

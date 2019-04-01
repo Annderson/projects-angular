@@ -14,7 +14,8 @@ export const environment = {
   },
 
   API: {
-    USUARIOTOKEN: 'https://localhost:5001/api/JWToken'
+    USUARIOTOKEN: 'https://localhost:5001/api/JWToken',
+    REGISTER_USER: 'https://localhost:5001/api/JWToken/create'
   }
 };
 

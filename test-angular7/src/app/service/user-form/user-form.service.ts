@@ -18,9 +18,6 @@ export class UserFormService {
   init() {
     this.user = new User();
     this.formUser = this.formBuilder.group({
-      id: [this.user.id,
-         [Validators.required]
-      ],
       nome: [this.user.nome, [Validators.required]],
       cpf: [this.user.cpf, [Validators.required]],
       dataNasc: [this.user.dataNasc, [Validators.required]],
